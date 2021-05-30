@@ -44,6 +44,8 @@ def get_mask_img(background_file, mask_file):
         # 얼굴 영역에 코와 입 모두 있어야 통과
         if not len(nose) or not len(mouth):
             continue
+        
+        # cv2.rectangle(resized_img, (fx, fy), (fx + fw, fy + fh), (255, 0, 0), 2)
 
         # AI가 인식한 코 후보들 중 얼굴 한가운데에 있는 후보를 코로 선정
         print('nose : '+str(len(nose))+' results found')
@@ -117,7 +119,7 @@ def get_mask_img(background_file, mask_file):
         except Exception as e:
             print(e)
 
-    # 이미지 최종 저장
+    #이미지 최종 저장
     result_url="result_image/"+background_file.split('/')[-1]
     cv2.imwrite(result_url, resized_img)
     cv2.destroyAllWindows()
