@@ -1,0 +1,77 @@
+section {
+    z-index: 1;
+}
+section::after{
+    content:'';
+    background-image: url(/static/image/mainbackground.jpg);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    min-width: 900px;
+    min-height: 600px;
+    margin:0 auto;
+    opacity: 0.4;
+    z-index: -1;
+}
+#main-intro {
+    position: absolute;
+    /* width:500px;
+    height:400px; */
+}
+.quicksand {
+    font-family: 'Quicksand', sans-serif;
+}
+.nskr {
+    font-family: 'Noto Sans KR', sans-serif;
+}
+/* .mainContainer {
+    position:relative;
+} */
+#textControl {
+    font-size:1rem;
+    width:350px;
+    margin-right: 15px;
+    text-align: center;
+}
+.white, .white a {
+    color: #fff;
+}
+
+.icon-margin {
+    margin-right: 15px;
+    margin-left: 10px;
+}
+
+#loading {
+    display: none;
+}
+
+#nav {
+    width:900px;
+    background-color: black;
+}
+
+#carouse-message{
+    font-family: 'Noto Sans KR', sans-serif;
+    font-size: 25px;
+}
+
+#carousel{
+    width: 1500px;
+    height:750px;
+}
+
+#maintitle{
+    font-size:70px;
+}
+
+#main-description, #image-description{
+    font-size:13px;
+}
+
+.mr-18{
+    margin-right: 18rem;
+}
+
+.mr-14{
+    margin-right: 14rem;
+}

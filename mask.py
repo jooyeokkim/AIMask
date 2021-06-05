@@ -117,9 +117,10 @@ def get_mask_img(background_file, mask_file):
             result = cv2.add(roi_mask, rotated_mask_img)
             np.copyto(roi, result)
         except Exception as e:
-            print(e)
+            return "roierror"
 
     #이미지 최종 저장
-    result_url="result_image/"+background_file.split('/')[-1]
+    result_url="static/result_image/"+background_file.split('/')[-1]
     cv2.imwrite(result_url, resized_img)
     cv2.destroyAllWindows()
+    return "done"
